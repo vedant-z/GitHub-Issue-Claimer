@@ -38,8 +38,6 @@ def search_issue(issue_link):
         else:
             return True
 
-#####################################################################################################################
-
 # Start the browser and open the issue page
 driver = webdriver.Chrome(path)
 
@@ -47,10 +45,6 @@ driver.get(url)
 
 # Set up the wait object
 wait = WebDriverWait(driver, 20)
-
-#####################################################################################################################
-
-# c=1
 
 while True:
 
@@ -79,16 +73,6 @@ while True:
                 issue_title = driver.find_element(By.XPATH, "//bdi[contains(@class, 'js-issue-title')]")
                 issue_info = f"{issue_title.text}\n{issue_link}\n\n"
                 write_to_file(issue_info)
-
-                # if(c):
-                #     c=0
-                #     signin_link = driver.find_element(By.XPATH, "//a[text()='Sign in']").get_attribute('href')
-                #     driver.get(signin_link)
-                #     username_box = wait.until(EC.element_to_be_clickable((By.XPATH, '// input[ @ id = "login_field"]')))
-                #     username_box.send_keys("vedant-z")
-                #     password_box = wait.until(EC.element_to_be_clickable((By.XPATH, '// input[ @ id = "password"]')))
-                #     password_box.send_keys("nightfury45@D")
-                #     driver.find_element(By.XPATH, '//input[@value="Sign in"]').click()
 
                 # Claim the issue by adding a comment
                 claim_issue(driver)
