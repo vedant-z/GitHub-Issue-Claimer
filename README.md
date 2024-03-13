@@ -12,7 +12,7 @@ Check the video demo <a href="https://drive.google.com/drive/folders/1sDYCmxRspy
 <br>
 ✔ Add path to chrome driver in the code.
 <br>
-✔ Mention the required labels(s) of issues you want to claim.
+✔ Mention the required label(s) of issues you want to claim.
 <br>
 ✔ Start the script and leave it to do your other tasks.
 <br>
